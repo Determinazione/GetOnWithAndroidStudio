@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">GetOnWithAndroidStudio</string>
     <string name="action_settings">Settings</string>
+    <string name="calculate_button_title">Calculate BMI</string>
+    <string name="your_weight_text">Your weight</string>
+    <string name="your_tall_text">Your tall</string>
 </resources>
