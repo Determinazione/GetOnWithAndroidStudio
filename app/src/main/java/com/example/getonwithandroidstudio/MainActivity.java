@@ -32,10 +32,52 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Toast.makeText(this, "Can you see me?", Toast.LENGTH_SHORT).show();
-        Log.i("info", "Toast have popped up.");
+        Toast.makeText(this, "In onCreate", Toast.LENGTH_SHORT).show();
+        Log.i("info", "In onCreate.");
     }
 
+    @Override
+    public void onStart() {
+        // First, call the official version of this method.
+        super.onStart();
+
+        Toast.makeText(this, "In onStart", Toast.LENGTH_SHORT).show();
+        Log.i("info", "In onStart");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        Toast.makeText(this, "In onResume", Toast.LENGTH_SHORT).show();
+        Log.i("info", "In onResume");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        Toast.makeText(this, "In onPause", Toast.LENGTH_SHORT).show();
+        Log.i("info", "In onPause");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        Toast.makeText(this, "In onStop", Toast.LENGTH_SHORT).show();
+        Log.i("info", "In onStop");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        Toast.makeText(this, "In onDestroy", Toast.LENGTH_SHORT).show();
+        Log.i("info", "In onDestroy");
+    }
+
+    // Called by the default version of onCreate method.
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -43,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    // Called when the user taps the menu button.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
